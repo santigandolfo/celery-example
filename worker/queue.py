@@ -2,8 +2,8 @@ from logging import getLogger
 
 from celery import Celery
 
-from commons.settings import REDIS
-from commons.usecases import add
+from domain.settings import REDIS
+from domain.usecases import add
 
 LOGGER = getLogger(__name__)
 
