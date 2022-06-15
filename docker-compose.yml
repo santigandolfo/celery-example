@@ -14,8 +14,11 @@ services:
       - redis
     command: sh web_starter.sh
 
-  redis:
-    image: redis
+  rabbitmq:
+    image: rabbitmq:3.10-management
+    ports:
+      - 5672:5672
+      - 15672:15672
 
   worker:
     build: .
