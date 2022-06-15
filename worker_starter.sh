@@ -1,2 +1,3 @@
 #!/bin/sh
-watchmedo auto-restart -d . -p '*.py' -R -- celery -A worker.queue worker --loglevel=INFO
+celery -A worker.worker_app worker --loglevel=INFO
+
