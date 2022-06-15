@@ -3,7 +3,7 @@ from logging import getLogger
 from fastapi import FastAPI, status
 from fastapi import Response
 
-from worker.queue import add_task
+from worker.worker_app import add_task
 
 LOGGER = getLogger(__name__)
 

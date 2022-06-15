@@ -11,10 +11,10 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - redis
+      - broker
     command: sh web_starter.sh
 
-  rabbitmq:
+  broker:
     image: rabbitmq:3.10-management
     ports:
       - 5672:5672
@@ -29,6 +29,6 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - redis
+      - broker
     command: sh worker_starter.sh
 

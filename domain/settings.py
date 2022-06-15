@@ -1,3 +1,3 @@
 import os
 
-BROKER = os.environ['REDIS_HOST']
+BROKER = os.environ['BROKER']
