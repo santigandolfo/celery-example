@@ -11,10 +11,10 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - broker
+      - redis
     command: sh web_starter.sh
 
-  broker:
+  redis:
     image: redis
 
   worker:
@@ -26,6 +26,6 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - broker
+      - redis
     command: sh worker_starter.sh
 
